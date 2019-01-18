@@ -1,22 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// const mysql = require('mysql');
-// var fs = require('fs');
-// var { uploader } = require('./helpers/uploader')
-
-// var tes = require('./helpers/uploader')
-//tes.uploader
 
 var port = process.env.PORT || 1997;
-
-// const conn = mysql.createConnection({
-//     host: 'db4free.net',
-//     user: 'justifyester1905',
-//     password: 'esterpasaribu1905',
-//     database: 'esterbersyukur',
-//     port: 3306
-// });
 
 var app = express({defaultErrorHandler:false});
 
@@ -24,7 +10,6 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(express.static('public'))
-//public nama dari folder sehingga otomatis path frondend agar bisa diakses 
 
 app.get('/', (req,res) => {
     res.send('<h1>Selamat Datang di API!</h1>')
