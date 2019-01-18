@@ -228,4 +228,4 @@ app.use("/brand", brandRouter)
 
 // })
 
-// app.listen(port, () => console.log('API Aktif di port ' + port))
+app.listen(port, () => console.log('API Aktif di port ' + port))
